@@ -11,6 +11,10 @@ function(){
   // SALVATAGGIO INPUT
   var cognomeUtente = document.getElementById("input").value;
 
+  // CONTROLLO CARATTERI SPECIALI
+  var re = /\$|,|@|#|~|`|\%|\*|\^|\&|\(|\)|\+|\=|\[|\-|\_|\]|\[|\}|\{|\;|\:|\'|\"|\<|\>|\?|\||\\|\!|\$|\./g;
+
+  cognomeUtente = cognomeUtente.replace(re, "");
   // ELIMINA SPAZI PRIMA E DOPO LA STRINGA
   cognomeUtente = cognomeUtente.trim();
 
@@ -36,7 +40,6 @@ function(){
 
     if(trovato == true){
       alert("Cognome già presente, inserisci un cognome non presente");
-      cognomeUtente = "";
     } else{
       // SE COGNOME NON PRESENTE
 
