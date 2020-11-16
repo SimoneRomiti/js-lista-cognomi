@@ -5,6 +5,7 @@
 
 var cognomi = ["Rossi", "Bianchi", "Verdi", "Pesce", "Castanetto"];
 var pulsante = document.getElementById("button");
+
 pulsante.addEventListener("click",
 function(){
   // SALVATAGGIO INPUT
